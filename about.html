@@ -1,76 +1,112 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Royal Tailors</title>
 
-{% block title %}About | Royal Tailors{% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom.css">
 
-{% block content %}
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="site-shell">
+
+<header class="site-header">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+        <a href="index.html" class="brand-mark">Royal Tailors</a>
+
+        <nav class="hidden lg:flex gap-6">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+</header>
+
 <section class="page-hero">
-    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32 sm:px-6 lg:px-8 lg:pt-40">
-        <div class="max-w-3xl animate-on-scroll">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32">
+        <div class="max-w-3xl">
             <p class="section-tag">About the Studio</p>
             <h1 class="page-title">A Jaipur tailoring house built around fit, finish, and restraint.</h1>
             <p class="page-copy">
-                Royal Tailors serves clients who want garments that feel considered from the first fitting to the final button.
-                We work slowly where it matters so the finished piece feels effortless.
+                Royal Tailors creates garments that feel considered from first fitting to final finish.
             </p>
         </div>
     </div>
 </section>
 
 <section class="section-shell pt-0">
-    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
-        <div class="story-panel animate-on-scroll">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 lg:grid-cols-2">
+
+        <div class="story-panel">
             <p class="section-tag">Our Philosophy</p>
-            <h2>Tailoring should support the person, not overpower them.</h2>
+            <h2>Tailoring should support the person.</h2>
             <p>
-                That means better shoulder balance, more thoughtful length, and silhouettes that feel rich because they are proportioned well,
-                not just because they are embellished.
+                We focus on balance, proportion, and clean silhouettes rather than heavy decoration.
             </p>
             <p>
-                We bring that approach to wedding garments, festive ensembles, business suiting, and custom one-off pieces for clients who want
-                a strong sense of finish and identity.
+                From wedding wear to formal suits, every piece is made with precision and purpose.
             </p>
         </div>
-        <div class="story-panel story-panel--accent animate-on-scroll">
+
+        <div class="story-panel">
             <p class="section-tag">Why Clients Return</p>
-            <ul class="info-list">
-                <li>Measured patterns and posture-aware fitting</li>
-                <li>Advice grounded in fabric behavior, not guesswork</li>
-                <li>Quietly luxurious design language</li>
-                <li>Reliable timelines for events and celebrations</li>
+            <ul>
+                <li>Precise measurements</li>
+                <li>Fabric-based guidance</li>
+                <li>Clean design style</li>
+                <li>Reliable timelines</li>
             </ul>
         </div>
+
     </div>
 </section>
 
-<section class="section-shell section-shell--muted">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-5 md:grid-cols-3">
-            <div class="detail-tile animate-on-scroll">
+<section class="section-shell">
+    <div class="mx-auto max-w-7xl px-4">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div>
                 <h3>Jaipur Roots</h3>
-                <p>Located in Johari Bazaar, the studio is shaped by the city’s appreciation for occasion dressing and hand-finished detail.</p>
+                <p>Inspired by traditional craftsmanship.</p>
             </div>
-            <div class="detail-tile animate-on-scroll">
-                <h3>Modern Tailoring Eye</h3>
-                <p>Even traditional garments are cut with a contemporary sense of line, weight, and proportion.</p>
+            <div>
+                <h3>Modern Approach</h3>
+                <p>Clean, contemporary tailoring style.</p>
             </div>
-            <div class="detail-tile animate-on-scroll">
-                <h3>Made for Real Use</h3>
-                <p>Our garments are built for actual events and repeated wear, not just one photograph under perfect light.</p>
+            <div>
+                <h3>Practical Wear</h3>
+                <p>Made for real events and repeated use.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section class="cta-band">
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
-        <div class="animate-on-scroll">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 lg:flex-row lg:justify-between">
+        <div>
             <p class="section-tag">Meet Us</p>
-            <h2>Visit the studio and talk through your next outfit in person.</h2>
+            <h2>Visit the studio and discuss your outfit.</h2>
         </div>
-        <div class="flex flex-col gap-3 sm:flex-row animate-on-scroll">
-            <a href="{{ url_for('booking') }}" class="btn btn-primary">Book a Consultation</a>
-            <a href="{{ url_for('contact') }}" class="btn btn-secondary">Contact the Studio</a>
+        <div class="flex gap-3">
+            <a href="booking.html" class="btn btn-primary">Book a Consultation</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Us</a>
         </div>
     </div>
 </section>
-{% endblock %}
+
+<footer class="site-footer">
+    <div class="mx-auto max-w-7xl px-4 py-6 text-center">
+        <p>© 2026 Royal Tailors</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>

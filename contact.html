@@ -1,56 +1,94 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Royal Tailors</title>
 
-{% block title %}Contact | Royal Tailors{% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom.css">
 
-{% block content %}
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="site-shell">
+
+<header class="site-header">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+        <a href="index.html" class="brand-mark">Royal Tailors</a>
+
+        <nav class="hidden lg:flex gap-6">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+</header>
+
 <section class="page-hero">
-    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32 sm:px-6 lg:px-8 lg:pt-40">
-        <div class="max-w-3xl animate-on-scroll">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32">
+        <div class="max-w-3xl">
             <p class="section-tag">Contact</p>
             <h1 class="page-title">Visit, call, or message the studio.</h1>
             <p class="page-copy">
-                Whether you are preparing for a wedding, refining your work wardrobe, or planning a custom festive outfit,
-                we are happy to help you decide the right direction.
+                We’re here to help you plan your next outfit.
             </p>
         </div>
     </div>
 </section>
 
 <section class="section-shell pt-0">
-    <div class="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
-        <div class="info-panel animate-on-scroll">
+    <div class="mx-auto grid max-w-7xl gap-6 px-4 lg:grid-cols-3">
+
+        <div class="info-panel">
             <p class="section-tag">Address</p>
             <h2>Royal Tailors</h2>
-            <p>Shree Ganesham, Dara Market</p>
-            <p>Johari Bazaar, Jaipur, Rajasthan</p>
+            <p>Johari Bazaar, Jaipur</p>
         </div>
-        <div class="info-panel animate-on-scroll">
+
+        <div class="info-panel">
             <p class="section-tag">Call</p>
             <h2><a href="tel:+919414072165">+91 94140 72165</a></h2>
-            <p>Monday to Saturday</p>
-            <p>10:00 AM to 8:00 PM</p>
+            <p>Mon–Sat, 10 AM – 8 PM</p>
         </div>
-        <div class="info-panel animate-on-scroll">
+
+        <div class="info-panel">
             <p class="section-tag">Message</p>
-            <h2>Fastest response</h2>
-            <p>WhatsApp us for appointment checks, urgent eventwear timelines, or basic consultation.</p>
-            <a href="https://wa.me/919414072165?text=Hello%20Royal%20Tailors,%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noreferrer" class="btn btn-secondary mt-5">Open WhatsApp</a>
+            <h2>WhatsApp</h2>
+            <a href="https://wa.me/919414072165" class="btn btn-secondary mt-4">
+                Open WhatsApp
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section-shell">
+    <div class="mx-auto max-w-7xl px-4">
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <h3>Best time to visit</h3>
+                <p>Weekday afternoons are best for detailed consultations.</p>
+            </div>
+            <div>
+                <h3>Bring references</h3>
+                <p>Photos or ideas help us understand your style better.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="section-shell section-shell--muted">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-5 md:grid-cols-2">
-            <div class="detail-tile animate-on-scroll">
-                <h3>Best time to visit</h3>
-                <p>Weekday afternoons are ideal for longer consultations, fabric discussions, and first measurements.</p>
-            </div>
-            <div class="detail-tile animate-on-scroll">
-                <h3>Bring references if you have them</h3>
-                <p>Photos, fabric inspiration, or existing garments help us understand your preferred line and level of detailing.</p>
-            </div>
-        </div>
+<footer class="site-footer">
+    <div class="mx-auto max-w-7xl px-4 py-6 text-center">
+        <p>© 2026 Royal Tailors</p>
     </div>
-</section>
-{% endblock %}
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>

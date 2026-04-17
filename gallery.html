@@ -1,132 +1,91 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Royal Tailors</title>
 
-{% block title %}Gallery | Royal Tailors{% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom.css">
 
-{% block content %}
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="site-shell">
+
+<header class="site-header">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+        <a href="index.html" class="brand-mark">Royal Tailors</a>
+
+        <nav class="hidden lg:flex gap-6">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+</header>
+
 <section class="page-hero">
-    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32 sm:px-6 lg:px-8 lg:pt-40">
-        <div class="max-w-3xl animate-on-scroll">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32">
+        <div class="max-w-3xl">
             <p class="section-tag">Gallery</p>
             <h1 class="page-title">A visual moodboard of the silhouettes we shape.</h1>
             <p class="page-copy">
-                This collection is arranged by occasion so you can quickly understand the tone,
-                detailing, and fit language we bring to different kinds of garments.
+                Explore different styles and tailoring approaches.
             </p>
         </div>
     </div>
 </section>
 
-<section class="section-shell section-shell--compact">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap gap-3 animate-on-scroll">
-            <button type="button" class="filter-btn filter-btn--active" data-filter="all">All</button>
-            <button type="button" class="filter-btn" data-filter="wedding">Wedding</button>
-            <button type="button" class="filter-btn" data-filter="casual">Casual</button>
-            <button type="button" class="filter-btn" data-filter="formal">Formal</button>
+<section class="section-shell">
+    <div class="mx-auto max-w-7xl px-4">
+        <div class="flex gap-3 mb-6">
+            <button class="filter-btn">All</button>
+            <button class="filter-btn">Wedding</button>
+            <button class="filter-btn">Casual</button>
+            <button class="filter-btn">Formal</button>
         </div>
-    </div>
-</section>
 
-<section class="section-shell pt-0">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="gallery-grid">
-            <article class="gallery-item animate-on-scroll" data-category="wedding">
-                <div class="gallery-item__surface surface-wedding">
-                    <span>Wedding Sherwani</span>
-                    <small>Silk base, hand-finished neckline, ceremonial proportion.</small>
-                </div>
-            </article>
-            <article class="gallery-item animate-on-scroll" data-category="wedding">
-                <div class="gallery-item__surface surface-groom">
-                    <span>Reception Bandhgala</span>
-                    <small>Deep-toned structure for evening presence and elegance.</small>
-                </div>
-            </article>
-            <article class="gallery-item animate-on-scroll" data-category="wedding">
-                <div class="gallery-item__surface surface-fusion">
-                    <span>Fusion Celebration Set</span>
-                    <small>Modern linework with traditional visual gravity.</small>
-                </div>
-            </article>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="gallery-item">Wedding Sherwani</div>
+            <div class="gallery-item">Reception Bandhgala</div>
+            <div class="gallery-item">Fusion Outfit</div>
 
-            <article class="gallery-item animate-on-scroll" data-category="casual">
-                <div class="gallery-item__surface surface-cotton">
-                    <span>Cotton Kurta</span>
-                    <small>Soft structure and all-day wearability for summer dressing.</small>
-                </div>
-            </article>
-            <article class="gallery-item animate-on-scroll" data-category="casual">
-                <div class="gallery-item__surface surface-linen">
-                    <span>Linen Kurta</span>
-                    <small>Breathable texture, cleaner cut, effortless drape.</small>
-                </div>
-            </article>
-            <article class="gallery-item animate-on-scroll" data-category="casual">
-                <div class="gallery-item__surface surface-festive">
-                    <span>Festive Daywear</span>
-                    <small>Relaxed enough for movement, refined enough for gathering.</small>
-                </div>
-            </article>
+            <div class="gallery-item">Cotton Kurta</div>
+            <div class="gallery-item">Linen Kurta</div>
+            <div class="gallery-item">Festive Wear</div>
 
-            <article class="gallery-item animate-on-scroll" data-category="formal">
-                <div class="gallery-item__surface surface-suit">
-                    <span>Three-Piece Suit</span>
-                    <small>Structured shoulder, clean trouser break, understated authority.</small>
-                </div>
-            </article>
-            <article class="gallery-item animate-on-scroll" data-category="formal">
-                <div class="gallery-item__surface surface-blazer">
-                    <span>Signature Blazer</span>
-                    <small>Built for office, travel, and evening crossover.</small>
-                </div>
-            </article>
-            <article class="gallery-item animate-on-scroll" data-category="formal">
-                <div class="gallery-item__surface surface-shirt">
-                    <span>Dress Shirt and Waistcoat</span>
-                    <small>Precision staples that make the rest of the wardrobe sharper.</small>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<section class="section-shell section-shell--muted">
-    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-        <div class="animate-on-scroll">
-            <p class="section-tag">Studio Notes</p>
-            <h2 class="section-title-left">The right garment should feel distinct before anyone asks where it was made.</h2>
-        </div>
-        <div class="grid gap-5 md:grid-cols-2">
-            <div class="detail-tile animate-on-scroll">
-                <h3>Shape First</h3>
-                <p>We aim for quiet luxury through line, proportion, and finish rather than decoration alone.</p>
-            </div>
-            <div class="detail-tile animate-on-scroll">
-                <h3>Fabric Awareness</h3>
-                <p>Every drape and structure decision changes with the cloth, not just the sketch.</p>
-            </div>
-            <div class="detail-tile animate-on-scroll">
-                <h3>Event Fit</h3>
-                <p>Wedding wear, reception wear, and formalwear each ask for different balance and movement.</p>
-            </div>
-            <div class="detail-tile animate-on-scroll">
-                <h3>Personal Signature</h3>
-                <p>The end result should still look like you, just elevated, composed, and intentional.</p>
-            </div>
+            <div class="gallery-item">Three Piece Suit</div>
+            <div class="gallery-item">Blazer</div>
+            <div class="gallery-item">Dress Shirt</div>
         </div>
     </div>
 </section>
 
 <section class="cta-band">
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
-        <div class="animate-on-scroll">
-            <p class="section-tag">See It On You</p>
-            <h2>Visit the studio to view fabrics, references, and current tailoring work in person.</h2>
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 lg:flex-row lg:justify-between">
+        <div>
+            <p class="section-tag">Visit Us</p>
+            <h2>See fabrics and designs in person.</h2>
         </div>
-        <div class="flex flex-col gap-3 sm:flex-row animate-on-scroll">
-            <a href="{{ url_for('booking') }}" class="btn btn-primary">Book a Visit</a>
-            <a href="{{ url_for('contact') }}" class="btn btn-secondary">Get Directions</a>
+        <div class="flex gap-3">
+            <a href="booking.html" class="btn btn-primary">Book a Visit</a>
+            <a href="contact.html" class="btn btn-secondary">Get Directions</a>
         </div>
     </div>
 </section>
-{% endblock %}
+
+<footer class="site-footer">
+    <div class="mx-auto max-w-7xl px-4 py-6 text-center">
+        <p>© 2026 Royal Tailors</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>

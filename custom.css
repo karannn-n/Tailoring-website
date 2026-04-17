@@ -570,8 +570,17 @@ a {
 }
 
 .service-card--rich {
-    padding: 1.5rem;
-    border-radius: var(--radius-xl);
+    padding: 1.8rem;
+    border-radius: 20px;
+
+    /* STRONG BOX VISIBILITY */
+    background: rgba(20, 20, 25, 0.9);
+    border: 1px solid rgba(217, 195, 162, 0.25);
+
+    /* remove blur confusion */
+    backdrop-filter: none;
+
+    transition: all 0.3s ease;
 }
 
 .service-meta {
@@ -969,17 +978,6 @@ a:hover {
     color: var(--gold);
 }
 
-/* ===== STRONGER SERVICE BOXES ===== */
-
-.service-card--rich {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 20px;
-    padding: 1.8rem;
-    backdrop-filter: blur(14px);
-    transition: all 0.3s ease;
-}
-
 /* stronger separation */
 .service-grid {
     gap: 1.8rem; /* increase spacing */
@@ -987,10 +985,10 @@ a:hover {
 
 /* hover = clearly interactive */
 .service-card--rich:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(217, 195, 162, 0.45);
+    background: rgba(30, 30, 35, 1);
+    border-color: rgba(217, 195, 162, 0.6);
     transform: translateY(-10px);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
 }
 
 .service-card--rich::after {

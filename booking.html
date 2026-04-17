@@ -1,80 +1,131 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Royal Tailors</title>
 
-{% block title %}Book Appointment | Royal Tailors{% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
 
-{% block content %}
+    <link rel="stylesheet" href="custom.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="site-shell">
+
+<header class="site-header">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+        <a href="index.html" class="brand-mark">
+            <span>Royal Tailors</span>
+        </a>
+
+        <nav class="hidden lg:flex gap-6">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+</header>
+
 <section class="page-hero">
-    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32 sm:px-6 lg:px-8 lg:pt-40">
-        <div class="max-w-3xl animate-on-scroll">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32">
+        <div class="max-w-3xl">
             <p class="section-tag">Book Appointment</p>
             <h1 class="page-title">Reserve a measurement session at the studio.</h1>
             <p class="page-copy">
-                Share a few details about the garment you need and your preferred appointment date.
-                We will confirm timing and next steps with you directly.
+                Share details about your garment and preferred appointment date.
             </p>
         </div>
     </div>
 </section>
 
 <section class="section-shell pt-0">
-    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-        <div class="form-shell animate-on-scroll">
-            <form action="{{ url_for('submit_booking') }}" method="post" onsubmit="return validateBookingForm();">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 lg:grid-cols-2">
+
+        <div class="form-shell">
+            <form action="https://formspree.io/f/xzdyeldr" method="POST">
                 <div class="grid gap-5 md:grid-cols-2">
-                    <label class="form-group md:col-span-1">
+
+                    <label class="form-group">
                         <span>Name</span>
-                        <input id="name" name="name" type="text" class="form-input" placeholder="Your full name" required>
+                        <input name="name" type="text" class="form-input" required>
                     </label>
-                    <label class="form-group md:col-span-1">
+
+                    <label class="form-group">
                         <span>Phone</span>
-                        <input id="phone" name="phone" type="tel" class="form-input" placeholder="10-digit phone number" oninput="formatPhoneNumber(this)" required>
+                        <input name="phone" type="tel" class="form-input" required>
                     </label>
-                    <label class="form-group md:col-span-1">
+
+                    <label class="form-group">
                         <span>Service</span>
-                        <select id="service" name="service" class="form-input" required>
-                            <option value="">Select a service</option>
-                            <option value="Wedding Sherwani">Wedding Sherwani</option>
-                            <option value="Kurta Pajama">Kurta Pajama</option>
-                            <option value="Bandhgala">Bandhgala</option>
-                            <option value="Business Suit">Business Suit</option>
-                            <option value="Blazer">Blazer</option>
-                            <option value="Shirt and Trousers">Shirt and Trousers</option>
-                            <option value="Alteration">Alteration</option>
-                            <option value="Custom Designer Outfit">Custom Designer Outfit</option>
+                        <select name="service" class="form-input" required>
+                            <option value="">Select</option>
+                            <option>Wedding Sherwani</option>
+                            <option>Kurta Pajama</option>
+                            <option>Bandhgala</option>
+                            <option>Business Suit</option>
+                            <option>Blazer</option>
+                            <option>Shirt and Trousers</option>
+                            <option>Alteration</option>
+                            <option>Custom Designer Outfit</option>
                         </select>
                     </label>
-                    <label class="form-group md:col-span-1">
+
+                    <label class="form-group">
                         <span>Preferred Date</span>
-                        <input id="preferred_date" name="preferred_date" type="date" class="form-input" required>
+                        <input name="preferred_date" type="date" class="form-input" required>
                     </label>
+
                     <label class="form-group md:col-span-2">
                         <span>Notes</span>
-                        <textarea id="notes" name="notes" rows="5" class="form-input" placeholder="Tell us about the event, preferred silhouette, fabric ideas, or deadline."></textarea>
+                        <textarea name="notes" rows="5" class="form-input"></textarea>
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary mt-6">Submit Booking Request</button>
+
+                <button type="submit" class="btn btn-primary mt-6">
+                    Submit Booking Request
+                </button>
             </form>
         </div>
 
         <div class="space-y-5">
-            <div class="info-panel animate-on-scroll">
+            <div class="info-panel">
                 <p class="section-tag">Appointment Details</p>
-                <h2>What to expect during your visit.</h2>
-                <ul class="info-list">
-                    <li>Style consultation and use-case discussion</li>
-                    <li>Detailed body measurements and fit notes</li>
-                    <li>Fabric and finishing guidance</li>
-                    <li>Timeline estimate and fitting schedule</li>
+                <h2>What to expect</h2>
+                <ul>
+                    <li>Consultation</li>
+                    <li>Measurements</li>
+                    <li>Fabric guidance</li>
+                    <li>Fittings</li>
                 </ul>
             </div>
-            <div class="info-panel animate-on-scroll">
+
+            <div class="info-panel">
                 <p class="section-tag">Studio Hours</p>
                 <h2>Monday to Saturday</h2>
                 <p>10:00 AM to 8:00 PM</p>
-                <p class="mt-4 text-white/72">For urgent wedding or eventwear timelines, message us on WhatsApp before visiting.</p>
-                <a href="https://wa.me/919414072165?text=Hello%20Royal%20Tailors,%20I%20would%20like%20to%20check%20appointment%20availability." target="_blank" rel="noreferrer" class="btn btn-secondary mt-6">Chat on WhatsApp</a>
+
+                <a href="https://wa.me/919414072165" class="btn btn-secondary mt-4">
+                    WhatsApp Us
+                </a>
             </div>
         </div>
+
     </div>
 </section>
-{% endblock %}
+
+<footer class="site-footer">
+    <div class="mx-auto max-w-7xl px-4 py-6 text-center">
+        <p>© 2026 Royal Tailors</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>

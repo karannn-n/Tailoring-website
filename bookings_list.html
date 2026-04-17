@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Bookings List | Royal Tailors{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32 sm:px-6 lg:px-8 lg:pt-40">
+        <div class="max-w-3xl animate-on-scroll">
+            <p class="section-tag">Bookings</p>
+            <h1 class="page-title">Appointment requests received by the studio.</h1>
+            <p class="page-copy">A simple internal view of current booking submissions stored in the local database.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell pt-0">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="table-shell animate-on-scroll">
+            {% if bookings %}
+                <div class="overflow-x-auto">
+                    <table class="booking-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Service</th>
+                                <th>Preferred Date</th>
+                                <th>Notes</th>
+                                <th>Submitted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for booking in bookings %}
+                                <tr>
+                                    <td>{{ booking.name }}</td>
+                                    <td>{{ booking.phone }}</td>
+                                    <td>{{ booking.service }}</td>
+                                    <td>{{ booking.preferred_date }}</td>
+                                    <td>{{ booking.notes or "-" }}</td>
+                                    <td>{{ booking.created_at }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p class="text-white/72">No bookings have been submitted yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

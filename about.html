@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}About | Royal Tailors{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32 sm:px-6 lg:px-8 lg:pt-40">
+        <div class="max-w-3xl animate-on-scroll">
+            <p class="section-tag">About the Studio</p>
+            <h1 class="page-title">A Jaipur tailoring house built around fit, finish, and restraint.</h1>
+            <p class="page-copy">
+                Royal Tailors serves clients who want garments that feel considered from the first fitting to the final button.
+                We work slowly where it matters so the finished piece feels effortless.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell pt-0">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
+        <div class="story-panel animate-on-scroll">
+            <p class="section-tag">Our Philosophy</p>
+            <h2>Tailoring should support the person, not overpower them.</h2>
+            <p>
+                That means better shoulder balance, more thoughtful length, and silhouettes that feel rich because they are proportioned well,
+                not just because they are embellished.
+            </p>
+            <p>
+                We bring that approach to wedding garments, festive ensembles, business suiting, and custom one-off pieces for clients who want
+                a strong sense of finish and identity.
+            </p>
+        </div>
+        <div class="story-panel story-panel--accent animate-on-scroll">
+            <p class="section-tag">Why Clients Return</p>
+            <ul class="info-list">
+                <li>Measured patterns and posture-aware fitting</li>
+                <li>Advice grounded in fabric behavior, not guesswork</li>
+                <li>Quietly luxurious design language</li>
+                <li>Reliable timelines for events and celebrations</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell section-shell--muted">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-5 md:grid-cols-3">
+            <div class="detail-tile animate-on-scroll">
+                <h3>Jaipur Roots</h3>
+                <p>Located in Johari Bazaar, the studio is shaped by the city’s appreciation for occasion dressing and hand-finished detail.</p>
+            </div>
+            <div class="detail-tile animate-on-scroll">
+                <h3>Modern Tailoring Eye</h3>
+                <p>Even traditional garments are cut with a contemporary sense of line, weight, and proportion.</p>
+            </div>
+            <div class="detail-tile animate-on-scroll">
+                <h3>Made for Real Use</h3>
+                <p>Our garments are built for actual events and repeated wear, not just one photograph under perfect light.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
+        <div class="animate-on-scroll">
+            <p class="section-tag">Meet Us</p>
+            <h2>Visit the studio and talk through your next outfit in person.</h2>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row animate-on-scroll">
+            <a href="{{ url_for('booking') }}" class="btn btn-primary">Book a Consultation</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-secondary">Contact the Studio</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

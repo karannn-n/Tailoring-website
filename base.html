@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Royal Tailors crafts refined traditional, formal, and occasion wear in Jaipur with precision tailoring and modern elegance.">
+    <meta name="keywords" content="tailor in Jaipur, custom tailoring, sherwani stitching, suit tailor, kurta tailor, bespoke tailoring">
+    <title>{% block title %}Royal Tailors | Bespoke Tailoring in Jaipur{% endblock %}</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: "#0f0f12",
+                        champagne: "#d9c3a2",
+                        ivory: "#f5f1e8",
+                        ember: "#8a5a44",
+                        velvet: "#241a18"
+                    },
+                    boxShadow: {
+                        glow: "0 20px 60px rgba(18, 18, 22, 0.18)"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="site-shell">
+    <div class="site-background"></div>
+
+    <header class="site-header">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <a href="{{ url_for('home') }}" class="brand-mark">
+                <span class="brand-mark__icon"><i class="fas fa-scissors"></i></span>
+                <span>
+                    <span class="brand-mark__eyebrow">Jaipur Atelier</span>
+                    <span class="brand-mark__name">Royal Tailors</span>
+                </span>
+            </a>
+
+            <nav class="site-nav hidden items-center gap-8 lg:flex" aria-label="Primary">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('services') }}">Services</a>
+                <a href="{{ url_for('gallery') }}">Gallery</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+            </nav>
+
+            <div class="hidden items-center gap-3 lg:flex">
+                <a href="tel:+919414072165" class="header-chip">
+                    <i class="fas fa-phone-volume"></i>
+                    <span>+91 94140 72165</span>
+                </a>
+                <a href="{{ url_for('booking') }}" class="btn btn-primary">Book Appointment</a>
+            </div>
+
+            <button id="mobile-menu-button" class="mobile-toggle lg:hidden" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu lg:hidden">
+            <div class="mx-4 mb-4 rounded-[28px] border border-white/10 bg-black/40 p-5 backdrop-blur-xl">
+                <div class="flex flex-col gap-4 text-sm uppercase tracking-[0.22em] text-white/72">
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('services') }}">Services</a>
+                    <a href="{{ url_for('gallery') }}">Gallery</a>
+                    <a href="{{ url_for('about') }}">About</a>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                    <a href="{{ url_for('booking') }}" class="btn btn-primary mt-2 justify-center">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <section class="mx-auto max-w-7xl px-4 pt-28 sm:px-6 lg:px-8">
+                    <div class="space-y-3">
+                        {% for category, message in messages %}
+                            <div class="alert {% if category == 'success' %}alert-success{% else %}alert-error{% endif %}">
+                                <span class="alert__icon">
+                                    <i class="fas {% if category == 'success' %}fa-circle-check{% else %}fa-circle-exclamation{% endif %}"></i>
+                                </span>
+                                <span>{{ message }}</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">
+            <div>
+                <p class="footer-kicker">Royal Tailors</p>
+                <h2 class="footer-title">Tailoring garments that feel inherited, not mass-produced.</h2>
+                <p class="footer-copy">
+                    We design and stitch occasion wear, formal ensembles, and custom pieces with a studio mindset:
+                    careful measurement, restrained detailing, and garments built to be worn for years.
+                </p>
+            </div>
+
+            <div>
+                <p class="footer-kicker">Visit</p>
+                <ul class="footer-list">
+                    <li>Shree Ganesham, Dara Market</li>
+                    <li>Johari Bazaar, Jaipur, Rajasthan</li>
+                    <li>Mon to Sat, 10:00 AM to 8:00 PM</li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="footer-kicker">Connect</p>
+                <ul class="footer-list">
+                    <li><a href="tel:+919414072165">+91 94140 72165</a></li>
+                    <li><a href="https://wa.me/919414072165?text=Hello%20Royal%20Tailors,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noreferrer">WhatsApp Consultation</a></li>
+                    <li><a href="{{ url_for('booking') }}">Book Appointment</a></li>
+                </ul>
+                <div class="mt-6 flex gap-3">
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/919414072165" target="_blank" rel="noreferrer" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-sm text-white/48 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+                <p>&copy; 2026 Royal Tailors. Crafted in Jaipur.</p>
+                <p>Bespoke tailoring for weddings, celebrations, and boardrooms.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919414072165?text=Hello%20Royal%20Tailors,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+       target="_blank"
+       rel="noreferrer"
+       class="whatsapp-float"
+       aria-label="Contact Royal Tailors on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

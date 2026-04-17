@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery | Royal Tailors{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32 sm:px-6 lg:px-8 lg:pt-40">
+        <div class="max-w-3xl animate-on-scroll">
+            <p class="section-tag">Gallery</p>
+            <h1 class="page-title">A visual moodboard of the silhouettes we shape.</h1>
+            <p class="page-copy">
+                This collection is arranged by occasion so you can quickly understand the tone,
+                detailing, and fit language we bring to different kinds of garments.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell section-shell--compact">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-3 animate-on-scroll">
+            <button type="button" class="filter-btn filter-btn--active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="wedding">Wedding</button>
+            <button type="button" class="filter-btn" data-filter="casual">Casual</button>
+            <button type="button" class="filter-btn" data-filter="formal">Formal</button>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell pt-0">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="gallery-grid">
+            <article class="gallery-item animate-on-scroll" data-category="wedding">
+                <div class="gallery-item__surface surface-wedding">
+                    <span>Wedding Sherwani</span>
+                    <small>Silk base, hand-finished neckline, ceremonial proportion.</small>
+                </div>
+            </article>
+            <article class="gallery-item animate-on-scroll" data-category="wedding">
+                <div class="gallery-item__surface surface-groom">
+                    <span>Reception Bandhgala</span>
+                    <small>Deep-toned structure for evening presence and elegance.</small>
+                </div>
+            </article>
+            <article class="gallery-item animate-on-scroll" data-category="wedding">
+                <div class="gallery-item__surface surface-fusion">
+                    <span>Fusion Celebration Set</span>
+                    <small>Modern linework with traditional visual gravity.</small>
+                </div>
+            </article>
+
+            <article class="gallery-item animate-on-scroll" data-category="casual">
+                <div class="gallery-item__surface surface-cotton">
+                    <span>Cotton Kurta</span>
+                    <small>Soft structure and all-day wearability for summer dressing.</small>
+                </div>
+            </article>
+            <article class="gallery-item animate-on-scroll" data-category="casual">
+                <div class="gallery-item__surface surface-linen">
+                    <span>Linen Kurta</span>
+                    <small>Breathable texture, cleaner cut, effortless drape.</small>
+                </div>
+            </article>
+            <article class="gallery-item animate-on-scroll" data-category="casual">
+                <div class="gallery-item__surface surface-festive">
+                    <span>Festive Daywear</span>
+                    <small>Relaxed enough for movement, refined enough for gathering.</small>
+                </div>
+            </article>
+
+            <article class="gallery-item animate-on-scroll" data-category="formal">
+                <div class="gallery-item__surface surface-suit">
+                    <span>Three-Piece Suit</span>
+                    <small>Structured shoulder, clean trouser break, understated authority.</small>
+                </div>
+            </article>
+            <article class="gallery-item animate-on-scroll" data-category="formal">
+                <div class="gallery-item__surface surface-blazer">
+                    <span>Signature Blazer</span>
+                    <small>Built for office, travel, and evening crossover.</small>
+                </div>
+            </article>
+            <article class="gallery-item animate-on-scroll" data-category="formal">
+                <div class="gallery-item__surface surface-shirt">
+                    <span>Dress Shirt and Waistcoat</span>
+                    <small>Precision staples that make the rest of the wardrobe sharper.</small>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell section-shell--muted">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div class="animate-on-scroll">
+            <p class="section-tag">Studio Notes</p>
+            <h2 class="section-title-left">The right garment should feel distinct before anyone asks where it was made.</h2>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2">
+            <div class="detail-tile animate-on-scroll">
+                <h3>Shape First</h3>
+                <p>We aim for quiet luxury through line, proportion, and finish rather than decoration alone.</p>
+            </div>
+            <div class="detail-tile animate-on-scroll">
+                <h3>Fabric Awareness</h3>
+                <p>Every drape and structure decision changes with the cloth, not just the sketch.</p>
+            </div>
+            <div class="detail-tile animate-on-scroll">
+                <h3>Event Fit</h3>
+                <p>Wedding wear, reception wear, and formalwear each ask for different balance and movement.</p>
+            </div>
+            <div class="detail-tile animate-on-scroll">
+                <h3>Personal Signature</h3>
+                <p>The end result should still look like you, just elevated, composed, and intentional.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
+        <div class="animate-on-scroll">
+            <p class="section-tag">See It On You</p>
+            <h2>Visit the studio to view fabrics, references, and current tailoring work in person.</h2>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row animate-on-scroll">
+            <a href="{{ url_for('booking') }}" class="btn btn-primary">Book a Visit</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-secondary">Get Directions</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

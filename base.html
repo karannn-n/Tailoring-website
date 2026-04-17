@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Royal Tailors crafts refined traditional, formal, and occasion wear in Jaipur with precision tailoring and modern elegance.">
-    <meta name="keywords" content="tailor in Jaipur, custom tailoring, sherwani stitching, suit tailor, kurta tailor, bespoke tailoring">
-
     <title>Royal Tailors</title>
 
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -31,108 +26,84 @@
         };
     </script>
 
-    <!-- Icons + Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="custom.css">
 </head>
 
 <body class="site-shell">
-    <div class="site-background"></div>
+<div class="site-background"></div>
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+<header class="site-header">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
 
-            <a href="index.html" class="brand-mark">
-                <span class="brand-mark__icon"><i class="fas fa-scissors"></i></span>
-                <span>
-                    <span class="brand-mark__eyebrow">Jaipur Atelier</span>
-                    <span class="brand-mark__name">Royal Tailors</span>
-                </span>
+        <a href="index.html" class="brand-mark">
+            <span class="brand-mark__icon"><i class="fas fa-scissors"></i></span>
+            <span>
+                <span class="brand-mark__eyebrow">Jaipur Atelier</span>
+                <span class="brand-mark__name">Royal Tailors</span>
+            </span>
+        </a>
+
+        <nav class="hidden lg:flex gap-8">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-3">
+            <a href="tel:+919414072165" class="header-chip">
+                <i class="fas fa-phone-volume"></i>
+                <span>+91 94140 72165</span>
             </a>
-
-            <nav class="site-nav hidden items-center gap-8 lg:flex">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-
-            <div class="hidden items-center gap-3 lg:flex">
-                <a href="tel:+919414072165" class="header-chip">
-                    <i class="fas fa-phone-volume"></i>
-                    <span>+91 94140 72165</span>
-                </a>
-                <a href="booking.html" class="btn btn-primary">Book Appointment</a>
-            </div>
-
-            <button id="mobile-menu-button" class="mobile-toggle lg:hidden" type="button">
-                <span></span>
-                <span></span>
-            </button>
+            <a href="booking.html" class="btn btn-primary">Book Appointment</a>
         </div>
 
-        <!-- MOBILE MENU -->
-        <div id="mobile-menu" class="mobile-menu lg:hidden">
-            <div class="mx-4 mb-4 rounded-[28px] border border-white/10 bg-black/40 p-5 backdrop-blur-xl">
-                <div class="flex flex-col gap-4 text-sm uppercase tracking-[0.22em] text-white/72">
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="booking.html" class="btn btn-primary mt-2 justify-center">Book Appointment</a>
-                </div>
-            </div>
+    </div>
+</header>
+
+<main>
+    <!-- Replace this section in each page -->
+    <section class="p-10 text-center">
+        <h1 class="text-3xl">Content goes here</h1>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3">
+
+        <div>
+            <p class="footer-kicker">Royal Tailors</p>
+            <h2 class="footer-title">Tailoring garments that feel inherited, not mass-produced.</h2>
         </div>
-    </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        <!-- 👉 Replace this section for each page -->
-        <section class="p-10 text-center">
-            <h1 class="text-3xl">Content goes here</h1>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3">
-
-            <div>
-                <p class="footer-kicker">Royal Tailors</p>
-                <h2 class="footer-title">Tailoring garments that feel inherited, not mass-produced.</h2>
-            </div>
-
-            <div>
-                <p class="footer-kicker">Visit</p>
-                <ul class="footer-list">
-                    <li>Johari Bazaar, Jaipur</li>
-                    <li>Mon to Sat, 10 AM – 8 PM</li>
-                </ul>
-            </div>
-
-            <div>
-                <p class="footer-kicker">Connect</p>
-                <ul class="footer-list">
-                    <li><a href="tel:+919414072165">Call</a></li>
-                    <li><a href="booking.html">Book Appointment</a></li>
-                </ul>
-            </div>
-
+        <div>
+            <p class="footer-kicker">Visit</p>
+            <ul class="footer-list">
+                <li>Johari Bazaar, Jaipur</li>
+                <li>Mon to Sat, 10 AM – 8 PM</li>
+            </ul>
         </div>
-    </footer>
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/919414072165" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+        <div>
+            <p class="footer-kicker">Connect</p>
+            <ul class="footer-list">
+                <li><a href="tel:+919414072165">Call</a></li>
+                <li><a href="booking.html">Book Appointment</a></li>
+            </ul>
+        </div>
 
-    <!-- JS -->
-    <script src="main.js"></script>
+    </div>
+</footer>
+
+<a href="https://wa.me/919414072165" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="main.js"></script>
+
 </body>
 </html>

@@ -1,52 +1,58 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings List | Royal Tailors</title>
 
-{% block title %}Bookings List | Royal Tailors{% endblock %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom.css">
 
-{% block content %}
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="site-shell">
+
+<header class="site-header">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+        <a href="index.html" class="brand-mark">Royal Tailors</a>
+
+        <nav class="hidden lg:flex gap-6">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+</header>
+
 <section class="page-hero">
-    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32 sm:px-6 lg:px-8 lg:pt-40">
-        <div class="max-w-3xl animate-on-scroll">
+    <div class="mx-auto max-w-7xl px-4 pb-10 pt-32">
+        <div class="max-w-3xl">
             <p class="section-tag">Bookings</p>
             <h1 class="page-title">Appointment requests received by the studio.</h1>
-            <p class="page-copy">A simple internal view of current booking submissions stored in the local database.</p>
+            <p class="page-copy">This page is not functional on GitHub Pages.</p>
         </div>
     </div>
 </section>
 
 <section class="section-shell pt-0">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="table-shell animate-on-scroll">
-            {% if bookings %}
-                <div class="overflow-x-auto">
-                    <table class="booking-table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Service</th>
-                                <th>Preferred Date</th>
-                                <th>Notes</th>
-                                <th>Submitted</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for booking in bookings %}
-                                <tr>
-                                    <td>{{ booking.name }}</td>
-                                    <td>{{ booking.phone }}</td>
-                                    <td>{{ booking.service }}</td>
-                                    <td>{{ booking.preferred_date }}</td>
-                                    <td>{{ booking.notes or "-" }}</td>
-                                    <td>{{ booking.created_at }}</td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-            {% else %}
-                <p class="text-white/72">No bookings have been submitted yet.</p>
-            {% endif %}
-        </div>
+    <div class="mx-auto max-w-7xl px-4 text-center">
+        <p class="text-lg">Booking data cannot be displayed without a backend.</p>
+        <p class="mt-2 text-gray-400">Use email notifications from Formspree instead.</p>
     </div>
 </section>
-{% endblock %}
+
+<footer class="site-footer">
+    <div class="mx-auto max-w-7xl px-4 py-6 text-center">
+        <p>© 2026 Royal Tailors</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+{% block title %}Royal Tailors | Bespoke Occasion and Formal Wear in Jaipur{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="mx-auto grid max-w-7xl gap-14 px-4 pb-16 pt-32 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-24 lg:pt-40">
+        <div class="animate-on-scroll">
+            <p class="section-tag">Bespoke Tailoring Studio</p>
+            <h1 class="hero-title">Garments with the calm confidence of true craft.</h1>
+            <p class="hero-copy">
+                Royal Tailors creates sherwanis, bandhgalas, kurtas, blazers, and formalwear with a premium atelier approach.
+                Every silhouette is cut around you, not around a template.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{{ url_for('booking') }}" class="btn btn-primary">Book Measurement</a>
+                <a href="{{ url_for('services') }}" class="btn btn-secondary">Explore Services</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <strong>15+</strong>
+                    <span>Years shaping occasion wear in Jaipur.</span>
+                </div>
+                <div class="stat-card">
+                    <strong>3 fittings</strong>
+                    <span>For garments that drape, move, and finish cleanly.</span>
+                </div>
+                <div class="stat-card">
+                    <strong>1 studio</strong>
+                    <span>Focused on detail, fabric, and long-term fit.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-panel animate-on-scroll">
+            <div class="hero-panel__frame">
+                <div class="hero-panel__glow"></div>
+                <div class="hero-panel__content">
+                    <div class="hero-fabric hero-fabric--dark"></div>
+                    <div class="hero-fabric hero-fabric--gold"></div>
+                    <div class="hero-copyblock">
+                        <p class="hero-copyblock__eyebrow">Signature Focus</p>
+                        <h2>Wedding dressing, formal suiting, and modern festive wear.</h2>
+                        <ul>
+                            <li>Sherwanis and bandhgalas with structured finesse</li>
+                            <li>Boardroom-ready suits, blazers, shirts, and trousers</li>
+                            <li>Indo-western pieces with understated statement-making detail</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="section-heading animate-on-scroll">
+            <p class="section-tag">What We Make</p>
+            <h2>Three directions, one signature finish.</h2>
+            <p>
+                The collection moves from ceremonial to corporate, but the approach stays the same:
+                refined silhouettes, exact measurements, and finishing that looks effortless.
+            </p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+            <article class="feature-card animate-on-scroll">
+                <span class="feature-card__index">01</span>
+                <h3>Traditional Occasion Wear</h3>
+                <p>Sherwanis, kurtas, Nehru jackets, and festive sets designed to photograph beautifully and wear comfortably for long events.</p>
+                <a href="{{ url_for('services') }}">See ceremonial pieces</a>
+            </article>
+
+            <article class="feature-card animate-on-scroll">
+                <span class="feature-card__index">02</span>
+                <h3>Formal Tailoring</h3>
+                <p>Suits, blazers, shirts, and trousers with clean lines, balanced shoulders, and a measured fit that feels composed.</p>
+                <a href="{{ url_for('services') }}">View formal tailoring</a>
+            </article>
+
+            <article class="feature-card animate-on-scroll">
+                <span class="feature-card__index">03</span>
+                <h3>Indo-Western Fusion</h3>
+                <p>Modern cuts with heritage influence for receptions, parties, and clients who want something distinct without excess.</p>
+                <a href="{{ url_for('gallery') }}">Browse the gallery</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell section-shell--muted">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+        <div class="animate-on-scroll">
+            <p class="section-tag">Process</p>
+            <h2 class="section-title-left">Measured slowly. Finished precisely.</h2>
+            <p class="section-copy-left">
+                The best garments do not just fit once in front of a mirror. They sit correctly when you walk,
+                host, greet, and move through the evening. Our process is built around that.
+            </p>
+        </div>
+
+        <div class="timeline-grid">
+            <div class="timeline-card animate-on-scroll">
+                <span>01</span>
+                <h3>Consultation</h3>
+                <p>We discuss event type, style direction, fabric mood, and how the garment should feel on the body.</p>
+            </div>
+            <div class="timeline-card animate-on-scroll">
+                <span>02</span>
+                <h3>Measurement</h3>
+                <p>Precise measurements and fit notes shape the pattern, posture correction, sleeve balance, and fall.</p>
+            </div>
+            <div class="timeline-card animate-on-scroll">
+                <span>03</span>
+                <h3>Fittings</h3>
+                <p>We refine drape, structure, and finishing through fittings until the garment settles naturally.</p>
+            </div>
+            <div class="timeline-card animate-on-scroll">
+                <span>04</span>
+                <h3>Delivery</h3>
+                <p>You receive a polished final piece ready for ceremony, celebration, or your everyday professional wardrobe.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="section-heading animate-on-scroll">
+            <p class="section-tag">Client Notes</p>
+            <h2>What people remember after the event.</h2>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+            <article class="testimonial-card animate-on-scroll">
+                <p>"My wedding sherwani looked regal without feeling heavy. The fit was exact and the detailing was extremely clean."</p>
+                <strong>Rajesh Kumar</strong>
+                <span>Wedding Client</span>
+            </article>
+            <article class="testimonial-card animate-on-scroll">
+                <p>"The suit sits better than anything I have bought ready-made. It feels quiet, sharp, and very intentional."</p>
+                <strong>Amit Sharma</strong>
+                <span>Corporate Client</span>
+            </article>
+            <article class="testimonial-card animate-on-scroll">
+                <p>"They understood the brief instantly and made something modern without losing the traditional character I wanted."</p>
+                <strong>Vikram Singh</strong>
+                <span>Reception Wear Client</span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
+        <div class="animate-on-scroll">
+            <p class="section-tag">Next Step</p>
+            <h2>Let’s shape the piece you’ll actually want to wear again.</h2>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row animate-on-scroll">
+            <a href="{{ url_for('booking') }}" class="btn btn-primary">Schedule Appointment</a>
+            <a href="https://wa.me/919414072165?text=Hello%20Royal%20Tailors,%20I%20would%20like%20to%20discuss%20a%20custom%20outfit." target="_blank" rel="noreferrer" class="btn btn-secondary">WhatsApp Us</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
